@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Domotica App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+  <div class="home">
+    <form action="/handle_data" method="post">
+                <h1>Verlichting
+                    <p>
+                        <label class="switch">
+                        <input type="checkbox" name="verlichting">
+                        <span class="slider"></span>
+                        </label>
+                    </p>
+                </h1>
+    </form>
+      <form action="/handle_data" method="post">
+                <h2>Camera
+                    <p>
+                        <label class="switch">
+                        <input type="checkbox" name="cameratoezicht">
+                        <span class="slider"></span>
+                        </label>
+                    </p>
+                </h2>
+      </form>
+
+
+        <form action="/handle_data" method="post">
+                <h3>Noodalarm
+                    <p>
+                        <button class="btn danger" name="noodalarm">Alarm
+                        </button>
+                    </p>
+                </h3>
+            </form>
+
+  </div>
+
+</body>
+</html>
