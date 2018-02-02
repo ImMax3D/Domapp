@@ -52,10 +52,10 @@ def Alarm():
 	global camera_status							#Vraag de status van de camera op
 	global connection							#Dit is nodig voor het opslaan van de veranderingen in de database
 	cur.execute ("UPDATE status SET camera='1' WHERE bewonerID='1'")	#Verander de camera status in de database
-	light_status = 0							#Zet de status op 0 zodat de lamp altijd aan gaat
+	light_status = 1							#Zet de status op 1 zodat de lamp altijd aan gaat
 	cur.execute ("UPDATE status SET verlichting='1' WHERE bewonerID='1'")   #Verandert de licht status in de database
 	Light()									#Het licht gaat aan
-	camera_status = 0							#Zet de status op 0 zodat de camera altijd aan gaat
+	camera_status = 1							#Zet de status op 1 zodat de camera altijd aan gaat
 	switch_camera()								#De camera gaat aan
 	connection.commit()							#Zorgt ervoor dat de veranderingen worden opgeslagen in de database
 	sleep(1)								#Zodat het alarm niet 10 keer per seconde afgaat
